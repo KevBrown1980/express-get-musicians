@@ -8,3 +8,4 @@ let Musician = sequelize.define('musician', {
 module.exports = {
     Musician
 };
+//
