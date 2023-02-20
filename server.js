@@ -6,6 +6,12 @@ const {sequelize} = require("./db")
 const port = 3000;
 
 //TODO
+app.get('/musicians', async (request, response) => {
+    //const date = new Date();
+    let allMusicians = await Musician.findAll();
+    //response.send(allMusicians);
+    response.json(allMusicians)
+})
 
 app.listen(port, () => {
     sequelize.sync();
